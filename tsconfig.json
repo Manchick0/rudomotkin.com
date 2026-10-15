@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "types": ["vite"]
+    },
+    "include": ["script.ts", "vite-env-override.d.ts"]
+}
