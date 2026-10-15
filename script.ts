@@ -88,7 +88,6 @@ function onLoad() {
         };
         requestAnimationFrame(render);
         canvas.addEventListener("wheel", (event) => {
-            console.log(event.deltaY);
             distance = Math.max(
                 Math.min(distance + event.deltaY * 0.005, 20),
                 4,
