@@ -16,12 +16,24 @@
     font-family: "Geist", "system-ui";
     background-color: var(--neutral-000);
     color: var(--contrast-000);
+
+    @media (orientation: portrait) {
+        font-size: 2rem;
+    }
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     width: 100svw;
     height: 100svh;
+    padding-inline: 10rem;
+    box-sizing: border-box;
+
+    @media (orientation: portrait) {
+        padding-inline: 3rem;
+    }
 }
 
 nav {
@@ -30,7 +42,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 2rem 10rem;
+    padding-block: 2rem;
     box-sizing: border-box;
 }
 
@@ -44,14 +56,14 @@ nav {
 #introduction {
     align-items: center;
     justify-content: center;
-    padding-inline: 10rem;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
 
     @media (orientation: portrait) {
-        display: grid;
-        grid-template-rows: 6fr 4fr;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
     }
     @media (orientation: landscape) {
         display: grid;
@@ -70,7 +82,7 @@ nav {
 }
 
 #about-me {
-    width: 80%;
+    width: min(100%, 40ch);
     color: var(--contrast-300);
 }
 
